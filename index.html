@@ -3,210 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CTMA – Centro de Treinamento Marcus Aniceto | Futevôlei no Leme, RJ</title>
-<meta name="description" content="Futevôlei na praia do Leme, RJ. Treinos personalizados para iniciante, intermediário e avançado. Aceitamos Wellhub, TotalPass e ClassPass. Agende sua aula experimental!">
-<meta property="og:title" content="CTMA – Futevôlei na praia do Leme, RJ">
-<meta property="og:description" content="A vida no CTMA é muito mais leve. Agende sua aula experimental!">
+<title>CTMA – Futevôlei na Praia do Leme | C.T. Marcus Aniceto</title>
+<meta name="description" content="Futevôlei na areia da praia do Leme, RJ. Treinos para iniciante, intermediário e avançado, todos os dias. Wellhub, TotalPass e ClassPass. Agende sua aula experimental.">
+<meta property="og:title" content="CTMA – Futevôlei na Praia do Leme">
+<meta property="og:description" content="A vida no CTMA é muito mais leve. Agende sua aula experimental.">
 <meta property="og:image" content="img/hero.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FFC700'/><text x='50' y='68' font-size='50' text-anchor='middle'>🏐</text></svg>">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23FFC700' stroke='%23111' stroke-width='6'/%3E%3Cpath d='M50 4 L62 34 L50 50 L38 34 Z M96 50 L66 62 L50 50 L66 38 Z M50 96 L38 66 L50 50 L62 66 Z M4 50 L34 38 L50 50 L34 62 Z' fill='%23111'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --amarelo:#FFC700;
-  --amarelo-escuro:#E0AE00;
-  --preto:#111111;
-  --preto-suave:#1d1d1d;
-  --azul-mar:#0E7490;
-  --areia:#F5EBDD;
+  --amarelo-escuro:#E6B300;
+  --preto:#0D0D0D;
+  --preto2:#161616;
+  --areia:#F4EDE1;
   --branco:#FFFFFF;
-  --cinza:#555;
+  --cinza:#6b6b6b;
+  --display:'Anton',Impact,sans-serif;
+  --texto:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--preto);background:var(--branco);line-height:1.6}
-h1,h2,h3{font-weight:800;letter-spacing:-.02em;text-transform:uppercase}
+body{font-family:var(--texto);color:var(--preto);background:var(--branco);line-height:1.65}
 img{max-width:100%;display:block}
 a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
 
-/* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,17,17,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.2rem}
-nav .logo{display:flex;align-items:center;gap:.6rem;color:var(--branco);font-weight:800;text-decoration:none}
-nav .logo .bola{width:38px;height:38px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;font-size:1.2rem}
-nav ul{display:flex;gap:1.2rem;list-style:none}
-nav ul a{color:#eee;text-decoration:none;font-size:.9rem;font-weight:600;text-transform:uppercase}
+/* ============ NAV ============ */
+nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(13,13,13,.94);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:.55rem 1.2rem;border-bottom:1px solid rgba(255,199,0,.25)}
+.marca{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:#fff}
+.marca svg{width:44px;height:44px}
+.marca .nome{font-family:var(--display);font-size:1.25rem;letter-spacing:.06em}
+.marca .nome span{color:var(--amarelo)}
+nav ul{display:flex;gap:1.3rem;list-style:none;align-items:center}
+nav ul a{color:#ddd;text-decoration:none;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 nav ul a:hover{color:var(--amarelo)}
-.nav-cta{background:var(--amarelo);color:var(--preto)!important;padding:.45rem .9rem;border-radius:999px}
-@media(max-width:820px){nav ul{display:none}}
+.nav-cta{background:var(--amarelo);color:var(--preto)!important;padding:.55rem 1.1rem;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+@media(max-width:900px){nav ul{display:none}}
 
-/* ===== HERO ===== */
-header{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;color:var(--branco);padding:6rem 1.2rem 4rem;background:linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.65)),url('img/hero.jpg') center/cover no-repeat}
-header .tag{background:var(--amarelo);color:var(--preto);font-weight:800;padding:.3rem .9rem;border-radius:999px;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
-header h1{font-size:clamp(2rem,6vw,3.8rem);margin:1rem 0 .5rem;text-shadow:0 4px 24px rgba(0,0,0,.5)}
-header p.frase{font-size:clamp(1.1rem,3vw,1.6rem);font-weight:600;color:var(--amarelo);margin-bottom:2rem}
-.botoes{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.6rem;border-radius:999px;font-weight:800;text-decoration:none;text-transform:uppercase;font-size:.95rem;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
-.btn-amarelo{background:var(--amarelo);color:var(--preto)}
-.btn-borda{border:2px solid var(--branco);color:var(--branco);background:transparent}
-.btn-zap{background:#25D366;color:#fff}
-header .scroll-hint{position:absolute;bottom:1.4rem;font-size:1.6rem;animation:pula 1.6s infinite}
-@keyframes pula{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+/* ============ BOTÕES ============ */
+.btn{display:inline-block;padding:1rem 2rem;font-family:var(--display);font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s;text-align:center}
+.btn:hover{transform:translate(-2px,-2px)}
+.btn-amarelo{background:var(--amarelo);color:var(--preto);clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);box-shadow:4px 4px 0 rgba(255,199,0,.35)}
+.btn-borda{border:2px solid #fff;color:#fff;background:transparent}
+.btn-preto{background:var(--preto);color:var(--amarelo);clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%)}
 
-/* ===== SEÇÕES ===== */
-section{padding:4.5rem 1.2rem}
-.container{max-width:1080px;margin:0 auto}
-.sec-titulo{text-align:center;margin-bottom:2.5rem}
-.sec-titulo h2{font-size:clamp(1.6rem,4vw,2.4rem)}
-.sec-titulo .risco{width:70px;height:5px;background:var(--amarelo);margin:.7rem auto 0;border-radius:99px}
-.sec-titulo p{color:var(--cinza);max-width:640px;margin:.8rem auto 0}
+/* ============ HERO ============ */
+header{min-height:100svh;position:relative;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.hero-veu{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,.15) 40%,rgba(13,13,13,.88) 100%)}
+.hero-conteudo{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;padding:7rem 1.4rem 5.5rem}
+.hero-tag{display:inline-block;background:var(--amarelo);color:var(--preto);font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .9rem;margin-bottom:1.1rem;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+header h1{font-size:clamp(2.6rem,8.5vw,6rem);text-shadow:0 6px 40px rgba(0,0,0,.55)}
+header h1 .risco{color:var(--amarelo)}
+.hero-sub{max-width:560px;margin:1.1rem 0 2rem;font-size:1.05rem;color:#e8e8e8;font-weight:600}
+.hero-botoes{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-selo{position:absolute;right:4%;bottom:38%;width:clamp(110px,14vw,170px);z-index:2;animation:gira 26s linear infinite;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
+@keyframes gira{to{transform:rotate(360deg)}}
+@media(max-width:700px){.hero-selo{display:none}}
 
-/* reveal */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+/* ============ MARQUEE ============ */
+.marquee{background:var(--amarelo);color:var(--preto);overflow:hidden;white-space:nowrap;border-block:3px solid var(--preto)}
+.marquee-faixa{display:inline-block;font-family:var(--display);font-size:1.3rem;letter-spacing:.08em;padding:.55rem 0;animation:rola 22s linear infinite}
+.marquee-faixa span{margin:0 1.2rem}
+@keyframes rola{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ SEÇÕES ============ */
+section{padding:5rem 1.4rem}
+.container{max-width:1180px;margin:0 auto}
+.rotulo{font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza);margin-bottom:.6rem}
+.rotulo::before{content:"";display:inline-block;width:26px;height:3px;background:var(--amarelo);margin-right:.6rem;vertical-align:middle}
+.titulo{font-size:clamp(1.9rem,4.6vw,3.2rem);margin-bottom:1rem}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visivel{opacity:1;transform:none}
 
+/* como funciona */
+#como-funciona{background:var(--areia)}
+.passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem;margin-top:2.4rem}
+.passo{background:#fff;border:2px solid var(--preto);padding:1.8rem 1.6rem;box-shadow:6px 6px 0 var(--amarelo)}
+.passo .num{font-family:var(--display);font-size:2.6rem;color:transparent;-webkit-text-stroke:2px var(--preto);line-height:1}
+.passo h3{font-size:1.15rem;margin:.7rem 0 .4rem}
+.passo p{color:var(--cinza);font-size:.95rem}
+.passo a{font-weight:800;color:var(--preto)}
+
 /* quem somos */
-#quem-somos{background:var(--areia)}
-.duas-colunas{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
-@media(max-width:820px){.duas-colunas{grid-template-columns:1fr}}
-.duas-colunas img{border-radius:18px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
-#quem-somos .hash{color:var(--azul-mar);font-weight:800}
+.duas-colunas{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+@media(max-width:860px){.duas-colunas{grid-template-columns:1fr}}
+.moldura{position:relative}
+.moldura img{width:100%;aspect-ratio:4/5;object-fit:cover;border:3px solid var(--preto)}
+.moldura::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid var(--amarelo);z-index:-1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
+.stat{border-left:4px solid var(--amarelo);padding-left:.9rem}
+.stat b{font-family:var(--display);font-size:1.7rem;display:block;line-height:1.1}
+.stat span{font-size:.8rem;color:var(--cinza);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+#quem-somos p.corpo{color:#333;margin-bottom:.9rem}
+.hash{color:var(--preto);background:var(--amarelo);font-weight:800;padding:0 .35rem}
 
 /* modalidades */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
-.card{background:var(--preto);color:var(--branco);border-radius:18px;padding:2rem;text-align:center;transition:transform .25s}
-.card:hover{transform:translateY(-6px)}
-.card .icone{font-size:2.6rem;margin-bottom:.8rem}
-.card h3{color:var(--amarelo);margin-bottom:.6rem;font-size:1.2rem}
-.card p{color:#ccc;font-size:.95rem}
+#modalidades{background:var(--preto);color:#fff}
+#modalidades .rotulo{color:#999}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.4rem}
+@media(max-width:760px){.mods{grid-template-columns:1fr}}
+.mod{position:relative;overflow:hidden;border:2px solid #2a2a2a;min-height:340px;display:flex;align-items:flex-end}
+.mod img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s;filter:saturate(.9)}
+.mod:hover img{transform:scale(1.06)}
+.mod .veu{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(13,13,13,.92))}
+.mod .info{position:relative;z-index:2;padding:1.6rem}
+.mod h3{font-size:1.6rem;color:var(--amarelo)}
+.mod p{color:#ddd;font-size:.95rem;max-width:420px}
 
 /* horários */
-#horarios{background:var(--preto);color:var(--branco)}
-#horarios .sec-titulo p{color:#bbb}
-.turnos{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:760px;margin:0 auto}
-@media(max-width:640px){.turnos{grid-template-columns:1fr}}
-.turno{background:var(--preto-suave);border:2px solid #333;border-radius:18px;padding:1.6rem;transition:border-color .3s,box-shadow .3s}
-.turno:hover,.turno.agora{border-color:var(--amarelo);box-shadow:0 0 0 4px rgba(255,199,0,.15)}
-.turno h3{color:var(--amarelo);display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
-.horas{display:flex;flex-wrap:wrap;gap:.6rem}
-.hora{background:#2a2a2a;padding:.5rem 1rem;border-radius:999px;font-weight:700}
-.hora.hora-atual{background:var(--amarelo);color:var(--preto)}
-.selo-agora{display:none;background:var(--amarelo);color:var(--preto);font-size:.7rem;font-weight:800;padding:.15rem .6rem;border-radius:999px;text-transform:uppercase}
+#horarios{background:var(--preto2);color:#fff;border-top:3px solid var(--amarelo)}
+#horarios .rotulo{color:#999}
+.turnos{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.4rem}
+@media(max-width:680px){.turnos{grid-template-columns:1fr}}
+.turno{border:2px solid #333;padding:1.7rem;transition:border-color .3s}
+.turno.agora{border-color:var(--amarelo)}
+.turno h3{font-size:1.25rem;display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem}
+.selo-agora{display:none;background:var(--amarelo);color:var(--preto);font-family:var(--texto);font-size:.65rem;font-weight:800;padding:.2rem .6rem;letter-spacing:.1em}
 .turno.agora .selo-agora{display:inline-block}
-#horarios .obs{text-align:center;color:#bbb;margin-top:1.6rem;font-size:.9rem}
+.horas{display:flex;flex-wrap:wrap;gap:.7rem}
+.hora{font-family:var(--display);font-size:1.25rem;border:2px solid #444;padding:.45rem 1.05rem;letter-spacing:.04em}
+.hora.hora-atual{background:var(--amarelo);color:var(--preto);border-color:var(--amarelo)}
+#horarios .obs{margin-top:1.6rem;color:#aaa;font-size:.9rem}
+#horarios .obs b{color:var(--amarelo)}
 
 /* planos */
 #planos{background:var(--areia)}
-.badges{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2rem}
-.badge{background:var(--branco);border:2px solid var(--preto);border-radius:14px;padding:1rem 1.8rem;font-weight:800;font-size:1.1rem;display:flex;align-items:center;gap:.5rem;box-shadow:4px 4px 0 var(--amarelo)}
-.planos-cta{text-align:center}
-.planos-cta p{margin-bottom:1.2rem;color:var(--cinza)}
+.convenios{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.2rem}
+.convenio{background:#fff;border:2px solid var(--preto);padding:1.1rem 1.9rem;font-weight:800;font-size:1.05rem;box-shadow:5px 5px 0 var(--preto)}
+.planos-linha{display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem;margin-top:2.4rem;background:var(--preto);color:#fff;padding:1.8rem;justify-content:space-between}
+.planos-linha p{max-width:520px;font-weight:600}
+.planos-linha p b{color:var(--amarelo)}
 
-/* diferenciais */
-.difs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
-.dif{background:var(--branco);border:1px solid #eee;border-left:6px solid var(--amarelo);border-radius:12px;padding:1.2rem 1.4rem;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-.dif strong{display:block;margin-bottom:.2rem}
+/* estrutura */
+.difs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:2.4rem}
+.dif{border:2px solid var(--preto);padding:1.4rem;position:relative}
+.dif::before{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:var(--amarelo)}
+.dif b{display:block;font-size:1rem;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.03em}
 .dif span{color:var(--cinza);font-size:.92rem}
 
-/* avaliações */
-#avaliacoes{background:var(--azul-mar);color:var(--branco);text-align:center}
-#avaliacoes .estrelas{font-size:2.2rem;letter-spacing:.3rem;color:var(--amarelo)}
-#avaliacoes .nota{font-size:3.4rem;font-weight:800;margin:.4rem 0}
-#avaliacoes p{max-width:560px;margin:0 auto;color:#dff}
-.depoimento{background:rgba(255,255,255,.1);border-radius:16px;padding:1.4rem;max-width:560px;margin:1.8rem auto 0;font-style:italic}
+/* avaliação */
+#avaliacoes{background:var(--preto);color:#fff;text-align:center}
+.estrelas{color:var(--amarelo);font-size:2rem;letter-spacing:.35rem}
+.nota{font-family:var(--display);font-size:4.5rem;line-height:1;color:var(--amarelo);margin:.3rem 0}
+#avaliacoes .fonte{color:#bbb;font-size:.95rem}
+.depoimento{max-width:640px;margin:2rem auto 0;font-size:1.25rem;font-weight:600;line-height:1.5}
+.depoimento::before{content:"“";font-family:var(--display);font-size:3.4rem;color:var(--amarelo);display:block;line-height:.6;margin-bottom:.6rem}
 
 /* galeria */
-.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
-.galeria figure{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:4/3;cursor:pointer}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin-top:2.4rem}
+.galeria figure{position:relative;overflow:hidden;aspect-ratio:1/1;border:2px solid var(--preto)}
 .galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.galeria figure:hover img{transform:scale(1.08)}
-.galeria figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;padding:1.6rem .9rem .7rem;font-size:.85rem;font-weight:600}
+.galeria figure:hover img{transform:scale(1.07)}
+.galeria figcaption{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;padding:1.4rem .8rem .6rem;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.galeria-nota{margin-top:1.2rem;color:var(--cinza);font-size:.9rem}
+.galeria-nota a{font-weight:800;color:var(--preto)}
 
-/* form / experimental */
-#experimental{background:var(--preto);color:var(--branco)}
-#experimental .sec-titulo p{color:#bbb}
-form{max-width:560px;margin:0 auto;display:grid;gap:1rem}
-label{font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em}
-input,select,textarea{width:100%;padding:.85rem 1rem;border-radius:12px;border:2px solid #333;background:var(--preto-suave);color:#fff;font-size:1rem;font-family:inherit}
+/* formulário */
+#experimental{background:var(--preto);color:#fff}
+#experimental .rotulo{color:#999}
+.form-grade{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1rem;align-items:start}
+@media(max-width:860px){.form-grade{grid-template-columns:1fr}}
+.form-lado p{color:#ccc;margin-bottom:1.2rem}
+.form-lado .bola-svg{width:130px;margin-top:1.5rem;animation:gira 30s linear infinite}
+form{display:grid;gap:1rem}
+label{font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+input,select,textarea{width:100%;padding:.9rem 1rem;border:2px solid #3a3a3a;background:var(--preto2);color:#fff;font-size:1rem;font-family:inherit;border-radius:0}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amarelo)}
-#form-msg{text-align:center;font-weight:700;min-height:1.4rem}
+#form-msg{font-weight:700;min-height:1.4rem}
 #form-msg.ok{color:#4ade80}
 #form-msg.erro{color:#f87171}
 
+/* faq */
+#faq{background:var(--areia)}
+.faq-lista{margin-top:2.2rem;max-width:820px}
+details{border:2px solid var(--preto);background:#fff;margin-bottom:.8rem}
+summary{cursor:pointer;list-style:none;padding:1.1rem 1.3rem;font-weight:800;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.4rem;color:var(--amarelo);-webkit-text-stroke:1px var(--preto)}
+details[open] summary::after{content:"–"}
+details p{padding:0 1.3rem 1.2rem;color:#444}
+
 /* localização */
-.mapa{border-radius:18px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.15);margin-bottom:2rem}
-.mapa iframe{width:100%;height:380px;border:0;display:block}
-.contatos{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
-.contato-item{background:var(--areia);padding:1rem 1.4rem;border-radius:14px;font-weight:600;display:flex;align-items:center;gap:.5rem}
+.mapa{border:3px solid var(--preto);margin-top:2.4rem}
+.mapa iframe{width:100%;height:400px;border:0;display:block}
+.contatos{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.4rem}
+.contato-item{border:2px solid var(--preto);padding:.9rem 1.3rem;font-weight:700;text-decoration:none;background:#fff;box-shadow:4px 4px 0 var(--amarelo)}
 
 /* footer */
-footer{background:var(--preto);color:#aaa;text-align:center;padding:2.5rem 1.2rem;font-size:.9rem}
-footer .logo-footer{width:64px;height:64px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;font-size:1.8rem;margin:0 auto 1rem}
+footer{background:var(--preto);color:#999;padding:3.5rem 1.4rem 2.5rem;font-size:.9rem}
+.footer-grade{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;gap:2rem;align-items:center}
+@media(max-width:760px){.footer-grade{grid-template-columns:1fr;text-align:center;justify-items:center}}
+footer .logo-f{width:84px}
+footer strong{color:#fff;font-family:var(--display);font-weight:400;letter-spacing:.04em;font-size:1.1rem;text-transform:uppercase}
 footer a{color:var(--amarelo);text-decoration:none;font-weight:700}
-footer .aviso{margin-top:1rem;font-size:.8rem;color:#777}
+footer .aviso{max-width:1180px;margin:2rem auto 0;padding-top:1.4rem;border-top:1px solid #2c2c2c;font-size:.8rem;color:#777}
 
 /* whatsapp flutuante */
-.zap-flutuante{position:fixed;bottom:1.4rem;right:1.4rem;z-index:99;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);text-decoration:none;font-size:1.9rem;animation:pulsa 2.4s infinite}
-@keyframes pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.zap-flutuante{position:fixed;bottom:1.3rem;right:1.3rem;z-index:99;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);text-decoration:none}
+.zap-flutuante svg{width:30px;height:30px;fill:#fff}
 </style>
 </head>
 <body>
 
+<!-- LOGO CTMA (recriação vetorial do selo redondo) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="selo-ctma">
+      <circle cx="100" cy="100" r="98" fill="#FFC700"/>
+      <circle cx="100" cy="100" r="70" fill="#0D0D0D"/>
+      <path id="arco-sup" d="M 100,100 m -84,0 a 84,84 0 1,1 168,0" fill="none"/>
+      <path id="arco-inf" d="M 100,100 m -84,0 a 84,84 0 1,0 168,0" fill="none"/>
+      <text font-family="Inter,Arial,sans-serif" font-weight="800" font-size="19" letter-spacing="4" fill="#0D0D0D">
+        <textPath href="#arco-sup" startOffset="50%" text-anchor="middle">• FUTEVÔLEI •</textPath>
+      </text>
+      <text font-family="Inter,Arial,sans-serif" font-weight="800" font-size="15" letter-spacing="2.5" fill="#0D0D0D">
+        <textPath href="#arco-inf" startOffset="50%" text-anchor="middle">C.T. MARCUS ANICETO</textPath>
+      </text>
+      <!-- monograma M. -->
+      <path d="M 66 122 C 64 96 72 76 84 76 C 96 76 92 104 88 116 C 96 92 106 76 117 76 C 129 76 126 96 122 110" fill="none" stroke="#FFC700" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="132" cy="122" r="8" fill="#FFC700"/>
+    </g>
+    <g id="bola-ft">
+      <circle cx="50" cy="50" r="47" fill="#FFC700" stroke="#0D0D0D" stroke-width="5"/>
+      <path d="M50 6 C55 20 58 30 50 44 C42 30 45 20 50 6 Z" fill="#0D0D0D"/>
+      <path d="M94 50 C80 55 70 58 56 50 C70 42 80 45 94 50 Z" fill="#0D0D0D"/>
+      <path d="M50 94 C45 80 42 70 50 56 C58 70 55 80 50 94 Z" fill="#0D0D0D"/>
+      <path d="M6 50 C20 45 30 42 44 50 C30 58 20 55 6 50 Z" fill="#0D0D0D"/>
+      <circle cx="50" cy="50" r="7" fill="#0D0D0D"/>
+    </g>
+  </defs>
+</svg>
+
 <nav>
-  <a class="logo" href="#topo"><span class="bola">🏐</span> CTMA</a>
+  <a class="marca" href="#topo" aria-label="CTMA – início">
+    <svg viewBox="0 0 200 200"><use href="#selo-ctma"/></svg>
+    <span class="nome">CTMA <span>ESPORTES</span></span>
+  </a>
   <ul>
-    <li><a href="#quem-somos">Quem somos</a></li>
+    <li><a href="#quem-somos">O CT</a></li>
     <li><a href="#modalidades">Modalidades</a></li>
     <li><a href="#horarios">Horários</a></li>
     <li><a href="#planos">Planos</a></li>
     <li><a href="#galeria">Fotos</a></li>
+    <li><a href="#faq">Dúvidas</a></li>
     <li><a href="#localizacao">Localização</a></li>
     <li><a class="nav-cta" href="#experimental">Aula experimental</a></li>
   </ul>
 </nav>
 
 <header id="topo">
-  <span class="tag">Futevôlei · Praia do Leme · RJ</span>
-  <h1>CTMA<br>Centro de Treinamento<br>Marcus Aniceto</h1>
-  <p class="frase">“A vida no CTMA é muito mais leve.”</p>
-  <div class="botoes">
-    <a class="btn btn-amarelo" href="#experimental">🏐 Agende sua aula experimental</a>
-    <a class="btn btn-borda" href="https://wa.me/5521998481797?text=Ol%C3%A1!%20Quero%20consultar%20os%20valores%20das%20aulas%20no%20CTMA." target="_blank" rel="noopener">💬 Consultar valores</a>
+  <img class="hero-foto" src="img/fotos/hero-real.jpg" onerror="this.onerror=null;this.src='img/hero.jpg'" alt="Quadra de futevôlei do CTMA na areia da praia do Leme ao pôr do sol">
+  <div class="hero-veu"></div>
+  <svg class="hero-selo" viewBox="0 0 200 200" aria-hidden="true"><use href="#selo-ctma"/></svg>
+  <div class="hero-conteudo">
+    <span class="hero-tag">Praia do Leme · Rio de Janeiro</span>
+    <h1>Futevôlei<br>na areia<br><span class="risco">do Leme</span></h1>
+    <p class="hero-sub">Centro de Treinamento Marcus Aniceto. Treinos para todos os níveis, todos os dias, de frente pro mar. A vida no CTMA é muito mais leve.</p>
+    <div class="hero-botoes">
+      <a class="btn btn-amarelo" href="#experimental">Agendar aula experimental</a>
+      <a class="btn btn-borda" href="https://wa.me/5521998481797?text=Ol%C3%A1!%20Quero%20consultar%20os%20valores%20das%20aulas%20no%20CTMA." target="_blank" rel="noopener">Consultar valores</a>
+    </div>
   </div>
-  <a class="scroll-hint" href="#quem-somos" aria-label="Rolar para baixo">⌄</a>
 </header>
 
-<section id="quem-somos">
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-faixa">
+    <span>#FAMILIACTMA</span>·<span>FUTEVÔLEI</span>·<span>PRAIA DO LEME</span>·<span>TODOS OS NÍVEIS</span>·<span>TODOS OS DIAS</span>·
+    <span>#FAMILIACTMA</span>·<span>FUTEVÔLEI</span>·<span>PRAIA DO LEME</span>·<span>TODOS OS NÍVEIS</span>·<span>TODOS OS DIAS</span>·
+  </div>
+</div>
+
+<section id="como-funciona">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Quem somos</h2>
-      <div class="risco"></div>
-    </div>
-    <div class="duas-colunas">
-      <div class="reveal">
-        <p>O <strong>CTMA – Centro de Treinamento Marcus Aniceto</strong> é uma arena de futevôlei montada na areia da <strong>praia do Leme</strong>, com vista para o mar e para os morros do Rio de Janeiro.</p>
-        <p style="margin-top:1rem">Oferecemos <strong>treinos personalizados</strong> para os níveis <strong>iniciante, intermediário e avançado</strong>, com quadras separadas por nível e um ambiente descontraído onde todo mundo evolui junto.</p>
-        <p style="margin-top:1rem">Mais do que treino, aqui você entra para a <span class="hash">#familiaCTMA</span> — sol, areia, esporte e uma comunidade que te empurra pra cima. 🌞</p>
+    <p class="rotulo reveal">Como funciona</p>
+    <h2 class="titulo reveal">Três passos pra cair na areia</h2>
+    <div class="passos">
+      <div class="passo reveal">
+        <div class="num">01</div>
+        <h3>Chama no WhatsApp</h3>
+        <p>Fala com a gente no <a href="https://wa.me/5521998481797" target="_blank" rel="noopener">(21) 99848-1797</a> e conta seu nível — nunca jogou? Sem problema.</p>
       </div>
-      <img class="reveal" src="img/familia.jpg" alt="Alunos reunidos após o treino de futevôlei na praia do Leme">
+      <div class="passo reveal">
+        <div class="num">02</div>
+        <h3>Reserva seu horário</h3>
+        <p>Escolhe o melhor horário entre manhã e noite. A reserva é obrigatória, inclusive para convênios.</p>
+      </div>
+      <div class="passo reveal">
+        <div class="num">03</div>
+        <h3>Chega e joga</h3>
+        <p>Av. Atlântica, altura do nº 796. Quadra montada, professor te esperando e a #familiaCTMA pra jogar junto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quem-somos">
+  <div class="container duas-colunas">
+    <div class="reveal">
+      <p class="rotulo">O CT</p>
+      <h2 class="titulo">Mais que treino,<br>uma família na areia</h2>
+      <p class="corpo">O <strong>Centro de Treinamento Marcus Aniceto</strong> é uma arena de futevôlei montada na areia da praia do Leme, com o mar e os morros do Rio de cenário.</p>
+      <p class="corpo">São treinos personalizados para <strong>iniciante, intermediário e avançado</strong>, com quadras separadas por nível — cada um evolui no seu ritmo, mas ninguém joga sozinho: aqui você entra pra <span class="hash">#familiaCTMA</span>.</p>
+      <div class="stats">
+        <div class="stat"><b>5.0</b><span>nota no Wellhub</span></div>
+        <div class="stat"><b>7 dias</b><span>por semana</span></div>
+        <div class="stat"><b>3 níveis</b><span>de treino</span></div>
+      </div>
+    </div>
+    <div class="moldura reveal">
+      <img src="img/fotos/quem-somos.jpg" onerror="this.onerror=null;this.src='img/familia.jpg'" alt="Alunos do CTMA reunidos na quadra de futevôlei do Leme">
     </div>
   </div>
 </section>
 
 <section id="modalidades">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Modalidades</h2>
-      <div class="risco"></div>
-    </div>
-    <div class="cards">
-      <div class="card reveal">
-        <div class="icone">🏐</div>
-        <h3>Futevôlei</h3>
-        <p>Treinos técnicos e jogos na areia para todos os níveis, com quadras separadas por habilidade e acompanhamento próximo dos professores.</p>
+    <p class="rotulo reveal">Modalidades</p>
+    <h2 class="titulo reveal">O que você treina aqui</h2>
+    <div class="mods">
+      <div class="mod reveal">
+        <img src="img/fotos/futevolei.jpg" onerror="this.onerror=null;this.src='img/acao.jpg'" alt="Aluno jogando futevôlei na areia">
+        <div class="veu"></div>
+        <div class="info">
+          <h3>Futevôlei</h3>
+          <p>Técnica, jogo e evolução na areia, com acompanhamento próximo dos professores e quadras por nível.</p>
+        </div>
       </div>
-      <div class="card reveal">
-        <div class="icone">💪</div>
-        <h3>Circuito de areia</h3>
-        <p>Treino físico funcional na areia: força, resistência e explosão com o melhor cenário do Rio de Janeiro como academia.</p>
+      <div class="mod reveal">
+        <img src="img/fotos/circuito.jpg" onerror="this.onerror=null;this.src='img/noite.jpg'" alt="Treino físico na areia à noite">
+        <div class="veu"></div>
+        <div class="info">
+          <h3>Circuito de areia</h3>
+          <p>Treino físico funcional: força, resistência e explosão com a melhor academia a céu aberto do Rio.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -214,14 +347,11 @@ footer .aviso{margin-top:1rem;font-size:.8rem;color:#777}
 
 <section id="horarios">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Horários das aulas</h2>
-      <div class="risco"></div>
-      <p>Todos os dias da semana. É necessário reservar horário para participar.</p>
-    </div>
+    <p class="rotulo reveal">Horários</p>
+    <h2 class="titulo reveal">Todos os dias, sol ou luz de quadra</h2>
     <div class="turnos">
       <div class="turno reveal" id="turno-manha">
-        <h3>🌅 Manhã <span class="selo-agora">agora</span></h3>
+        <h3>Manhã <span class="selo-agora">rolando agora</span></h3>
         <div class="horas">
           <span class="hora" data-h="6">6h</span>
           <span class="hora" data-h="7">7h</span>
@@ -229,7 +359,7 @@ footer .aviso{margin-top:1rem;font-size:.8rem;color:#777}
         </div>
       </div>
       <div class="turno reveal" id="turno-noite">
-        <h3>🌇 Tarde / Noite <span class="selo-agora">agora</span></h3>
+        <h3>Tarde / Noite <span class="selo-agora">rolando agora</span></h3>
         <div class="horas">
           <span class="hora" data-h="17">17h</span>
           <span class="hora" data-h="18">18h</span>
@@ -238,153 +368,173 @@ footer .aviso{margin-top:1rem;font-size:.8rem;color:#777}
         </div>
       </div>
     </div>
-    <p class="obs">⚠️ Horários sujeitos a alteração em feriados. Confirme pelo WhatsApp.</p>
+    <p class="obs reveal"><b>Reserve antes de ir</b> — é necessário agendar horário para participar. Horários sujeitos a alteração em feriados.</p>
   </div>
 </section>
 
 <section id="planos">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Planos e convênios</h2>
-      <div class="risco"></div>
-      <p>Treine no CTMA usando o benefício da sua empresa — é só reservar o horário e chegar.</p>
+    <p class="rotulo reveal">Planos e convênios</p>
+    <h2 class="titulo reveal">Seu benefício vale areia</h2>
+    <div class="convenios reveal">
+      <span class="convenio">Wellhub <small>(ex-Gympass)</small></span>
+      <span class="convenio">TotalPass</span>
+      <span class="convenio">ClassPass</span>
     </div>
-    <div class="badges reveal">
-      <span class="badge">✅ Wellhub <small>(ex-Gympass)</small></span>
-      <span class="badge">✅ TotalPass</span>
-      <span class="badge">✅ ClassPass</span>
-    </div>
-    <div class="planos-cta reveal">
-      <p>Não tem convênio? Sem problema — temos planos diretos para você.</p>
-      <a class="btn btn-zap" href="https://wa.me/5521998481797?text=Ol%C3%A1!%20Quero%20consultar%20os%20valores%20e%20planos%20do%20CTMA." target="_blank" rel="noopener">💬 Consultar valores no WhatsApp</a>
+    <div class="planos-linha reveal">
+      <p>Não tem convênio? Temos <b>planos diretos</b> — mensal, trimestral ou avulso. Chama no WhatsApp e a gente monta o melhor formato pra sua rotina.</p>
+      <a class="btn btn-amarelo" href="https://wa.me/5521998481797?text=Ol%C3%A1!%20Quero%20consultar%20os%20valores%20e%20planos%20do%20CTMA." target="_blank" rel="noopener">Consultar valores</a>
     </div>
   </div>
 </section>
 
-<section id="diferenciais">
+<section id="estrutura">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Nossa estrutura</h2>
-      <div class="risco"></div>
-    </div>
+    <p class="rotulo reveal">Estrutura</p>
+    <h2 class="titulo reveal">Por que treinar no CTMA</h2>
     <div class="difs">
-      <div class="dif reveal"><strong>🏖️ Quadras na areia do Leme</strong><span>Treine com o mar e os morros do Rio de cenário.</span></div>
-      <div class="dif reveal"><strong>💡 Treinos noturnos iluminados</strong><span>Quadras com iluminação para treinar depois do trabalho.</span></div>
-      <div class="dif reveal"><strong>🎯 Quadras por nível</strong><span>Iniciante, intermediário e avançado, cada um no seu ritmo.</span></div>
-      <div class="dif reveal"><strong>🚗 Estacionamento próximo</strong><span>Facilidade para chegar de carro na Av. Atlântica.</span></div>
-      <div class="dif reveal"><strong>🏋️ Personal trainer</strong><span>Acompanhamento individualizado disponível.</span></div>
-      <div class="dif reveal"><strong>🤝 #familiaCTMA</strong><span>Comunidade acolhedora que treina e evolui junta.</span></div>
+      <div class="dif reveal"><b>Quadras na areia do Leme</b><span>Treino de frente pro mar, na altura do nº 796 da Av. Atlântica.</span></div>
+      <div class="dif reveal"><b>Treino noturno iluminado</b><span>Quadras com iluminação própria pra treinar depois do trabalho.</span></div>
+      <div class="dif reveal"><b>Quadras por nível</b><span>Iniciante, intermediário e avançado — cada um no seu jogo.</span></div>
+      <div class="dif reveal"><b>Personal trainer</b><span>Acompanhamento individualizado disponível.</span></div>
+      <div class="dif reveal"><b>Estacionamento próximo</b><span>Facilidade pra quem chega de carro.</span></div>
+      <div class="dif reveal"><b>Comunidade de verdade</b><span>A #familiaCTMA treina, joga e evolui junta.</span></div>
     </div>
   </div>
 </section>
 
 <section id="avaliacoes">
   <div class="container reveal">
-    <div class="sec-titulo">
-      <h2 style="color:#fff">O que dizem os alunos</h2>
-      <div class="risco"></div>
-    </div>
     <div class="estrelas">★★★★★</div>
     <div class="nota">5.0</div>
-    <p>Nota máxima com base em <strong>27 avaliações</strong> de alunos no Wellhub.</p>
-    <div class="depoimento">“Ambiente incrível, professores atenciosos e a melhor vista do Rio pra treinar. Virou meu programa favorito da semana!”</div>
+    <p class="fonte">nota máxima com base em 27 avaliações de alunos no Wellhub</p>
+    <p class="depoimento">Ambiente incrível, professores atenciosos e a melhor vista do Rio pra treinar. Virou meu programa favorito da semana.</p>
   </div>
 </section>
 
 <section id="galeria">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Galeria</h2>
-      <div class="risco"></div>
-      <p>Um pouco do nosso dia a dia na areia. Veja mais no <a href="https://www.instagram.com/ctmafutevolei" target="_blank" rel="noopener"><strong>@ctmafutevolei</strong></a>.</p>
-    </div>
+    <p class="rotulo reveal">Galeria</p>
+    <h2 class="titulo reveal">O dia a dia na areia</h2>
     <div class="galeria">
-      <figure class="reveal"><img src="img/hero.jpg" alt="Treino de futevôlei ao pôr do sol na praia do Leme" loading="lazy"><figcaption>Pôr do sol no Leme 🌅</figcaption></figure>
-      <figure class="reveal"><img src="img/noite.jpg" alt="Treino noturno de futevôlei com quadra iluminada" loading="lazy"><figcaption>Treino noturno iluminado 💡</figcaption></figure>
-      <figure class="reveal"><img src="img/acao.jpg" alt="Jogador de futevôlei dominando a bola na areia" loading="lazy"><figcaption>Técnica e evolução 🏐</figcaption></figure>
-      <figure class="reveal"><img src="img/familia.jpg" alt="Grupo de alunos do CTMA reunidos na praia" loading="lazy"><figcaption>#familiaCTMA 🤝</figcaption></figure>
+      <figure class="reveal"><img src="img/fotos/g1.jpg" onerror="this.onerror=null;this.src='img/hero.jpg'" alt="Treino ao pôr do sol na praia do Leme" loading="lazy"><figcaption>Pôr do sol no Leme</figcaption></figure>
+      <figure class="reveal"><img src="img/fotos/g2.jpg" onerror="this.onerror=null;this.src='img/noite.jpg'" alt="Treino noturno com quadra iluminada" loading="lazy"><figcaption>Treino noturno</figcaption></figure>
+      <figure class="reveal"><img src="img/fotos/g3.jpg" onerror="this.onerror=null;this.src='img/acao.jpg'" alt="Jogada de futevôlei" loading="lazy"><figcaption>Técnica e evolução</figcaption></figure>
+      <figure class="reveal"><img src="img/fotos/g4.jpg" onerror="this.onerror=null;this.src='img/familia.jpg'" alt="Grupo de alunos do CTMA" loading="lazy"><figcaption>#familiaCTMA</figcaption></figure>
     </div>
+    <p class="galeria-nota reveal">Acompanhe o dia a dia no Instagram: <a href="https://www.instagram.com/ctma.esportes" target="_blank" rel="noopener">@ctma.esportes</a></p>
   </div>
 </section>
 
 <section id="experimental">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Agende sua aula experimental</h2>
-      <div class="risco"></div>
-      <p>Preencha e a nossa equipe te chama no WhatsApp para marcar o melhor horário. Bora pra areia? 🏖️</p>
+    <p class="rotulo reveal">Aula experimental</p>
+    <h2 class="titulo reveal">Bora pra areia?</h2>
+    <div class="form-grade">
+      <div class="form-lado reveal">
+        <p>Preenche aqui que a nossa equipe te chama no WhatsApp pra marcar o melhor horário da sua primeira aula.</p>
+        <p>Prefere falar direto? <a href="https://wa.me/5521998481797" target="_blank" rel="noopener" style="color:var(--amarelo);font-weight:800">Chama no (21) 99848-1797</a>.</p>
+        <svg class="bola-svg" viewBox="0 0 100 100" aria-hidden="true"><use href="#bola-ft"/></svg>
+      </div>
+      <form id="form-lead" class="reveal">
+        <div>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" required placeholder="Seu nome">
+        </div>
+        <div>
+          <label for="telefone">WhatsApp</label>
+          <input id="telefone" name="telefone" type="tel" required placeholder="(21) 9XXXX-XXXX">
+        </div>
+        <div>
+          <label for="nivel">Seu nível</label>
+          <select id="nivel" name="nivel">
+            <option value="iniciante">Iniciante — nunca joguei / estou começando</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+          </select>
+        </div>
+        <div>
+          <label for="horario">Horário preferido</label>
+          <select id="horario" name="horario">
+            <option value="manha">Manhã (6h, 7h ou 8h)</option>
+            <option value="tarde-noite">Tarde/Noite (17h, 18h, 19h ou 20h)</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conta pra gente seu objetivo"></textarea>
+        </div>
+        <button class="btn btn-amarelo" type="submit" id="btn-enviar">Quero minha aula experimental</button>
+        <p id="form-msg" role="status"></p>
+      </form>
     </div>
-    <form id="form-lead" class="reveal">
-      <div>
-        <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" required placeholder="Seu nome">
-      </div>
-      <div>
-        <label for="telefone">WhatsApp</label>
-        <input id="telefone" name="telefone" type="tel" required placeholder="(21) 9XXXX-XXXX">
-      </div>
-      <div>
-        <label for="nivel">Seu nível</label>
-        <select id="nivel" name="nivel">
-          <option value="iniciante">Iniciante (nunca joguei / estou começando)</option>
-          <option value="intermediario">Intermediário</option>
-          <option value="avancado">Avançado</option>
-        </select>
-      </div>
-      <div>
-        <label for="horario">Horário preferido</label>
-        <select id="horario" name="horario">
-          <option value="manha">Manhã (6h, 7h ou 8h)</option>
-          <option value="tarde-noite">Tarde/Noite (17h, 18h, 19h ou 20h)</option>
-        </select>
-      </div>
-      <div>
-        <label for="mensagem">Mensagem (opcional)</label>
-        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conta pra gente seu objetivo!"></textarea>
-      </div>
-      <button class="btn btn-amarelo" type="submit" id="btn-enviar">Quero minha aula experimental 🚀</button>
-      <p id="form-msg" role="status"></p>
-    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <p class="rotulo reveal">Dúvidas frequentes</p>
+    <h2 class="titulo reveal">Antes de cair na areia</h2>
+    <div class="faq-lista">
+      <details class="reveal">
+        <summary>Nunca joguei futevôlei. Posso começar do zero?</summary>
+        <p>Pode — e deve. As quadras são separadas por nível e o treino de iniciante é pensado pra quem nunca tocou na bola. Em poucas semanas você já troca bola.</p>
+      </details>
+      <details class="reveal">
+        <summary>O que eu preciso levar?</summary>
+        <p>Roupa leve, protetor solar e água. A bola e a quadra são por nossa conta. À noite a quadra é iluminada, então vale pra qualquer horário.</p>
+      </details>
+      <details class="reveal">
+        <summary>Uso Wellhub, TotalPass ou ClassPass. Como funciona?</summary>
+        <p>É só fazer o check-in pelo app do seu benefício e reservar o horário com a gente antes pelo WhatsApp — a reserva é obrigatória pra garantir sua vaga na quadra.</p>
+      </details>
+      <details class="reveal">
+        <summary>E se chover?</summary>
+        <p>Chuva fraca normalmente não para o treino — futevôlei é esporte de praia. Em caso de tempo fechado de verdade, avisamos os alunos do horário pelo WhatsApp.</p>
+      </details>
+    </div>
   </div>
 </section>
 
 <section id="localizacao">
   <div class="container">
-    <div class="sec-titulo reveal">
-      <h2>Onde estamos</h2>
-      <div class="risco"></div>
-      <p>Na areia da praia do Leme, na altura do nº 796 da Av. Atlântica.</p>
-    </div>
+    <p class="rotulo reveal">Localização</p>
+    <h2 class="titulo reveal">Na areia, altura do nº 796</h2>
     <div class="mapa reveal">
       <iframe title="Mapa – CTMA na praia do Leme" src="https://www.google.com/maps?q=Av.+Atl%C3%A2ntica,+796+-+Leme,+Rio+de+Janeiro+-+RJ,+22010-000&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
     <div class="contatos reveal">
-      <span class="contato-item">📍 Av. Atlântica, 796 – Leme, Rio de Janeiro – RJ, 22010-000</span>
-      <a class="contato-item" href="https://wa.me/5521998481797" target="_blank" rel="noopener">📞 (21) 99848-1797</a>
-      <a class="contato-item" href="https://www.instagram.com/ctmafutevolei" target="_blank" rel="noopener">📸 @ctmafutevolei</a>
+      <span class="contato-item">Av. Atlântica, 796 – Leme, Rio de Janeiro – RJ</span>
+      <a class="contato-item" href="https://wa.me/5521998481797" target="_blank" rel="noopener">(21) 99848-1797</a>
+      <a class="contato-item" href="https://www.instagram.com/ctma.esportes" target="_blank" rel="noopener">@ctma.esportes</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="logo-footer">🏐</div>
-  <p><strong style="color:#fff">CTMA – Centro de Treinamento Marcus Aniceto</strong></p>
-  <p>Futevôlei na praia do Leme · Rio de Janeiro</p>
-  <p style="margin-top:.6rem"><a href="https://www.instagram.com/ctmafutevolei" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/5521998481797" target="_blank" rel="noopener">WhatsApp</a></p>
-  <p class="aviso">⚠️ Horários sujeitos a alteração em feriados. É necessário reservar horário para participar das atividades.</p>
-  <p class="aviso">#familiaCTMA 💛🖤</p>
+  <div class="footer-grade">
+    <svg class="logo-f" viewBox="0 0 200 200" aria-hidden="true"><use href="#selo-ctma"/></svg>
+    <div>
+      <strong>CTMA · Centro de Treinamento Marcus Aniceto</strong><br>
+      Futevôlei · Beach Tênis · Vôlei — Praia do Leme, Rio de Janeiro<br>
+      <a href="https://www.instagram.com/ctma.esportes" target="_blank" rel="noopener">Instagram</a> ·
+      <a href="https://wa.me/5521998481797" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <svg style="width:64px" viewBox="0 0 100 100" aria-hidden="true"><use href="#bola-ft"/></svg>
+  </div>
+  <p class="aviso">Horários sujeitos a alteração em feriados. É necessário reservar horário para participar das atividades. #familiaCTMA</p>
 </footer>
 
-<a class="zap-flutuante" href="https://wa.me/5521998481797?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20CTMA%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+<a class="zap-flutuante" href="https://wa.me/5521998481797?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20CTMA%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.2.5 2.5.7 3.8.7 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.2-3.5-.7l-.6-.3-4.9.9 1-4.7-.3-.6c-1-1.6-1.5-3.5-1.5-5.4 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1c-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.4.1-.6l.6-.7c.2-.2.2-.4.3-.6s0-.4 0-.6c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.2 3.1 1.3 3.3c.1.2 2.3 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
 
 <script>
-// ===== Scroll reveal =====
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visivel'); observer.unobserve(e.target); } });
-}, { threshold: 0.15 });
+}, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ===== Destaque do turno/horário atual =====
 (function () {
   const h = new Date().getHours();
   if (h >= 5 && h < 12) document.getElementById('turno-manha').classList.add('agora');
@@ -394,7 +544,6 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   });
 })();
 
-// ===== Formulário -> Supabase =====
 const SUPABASE_URL = 'https://mhqhbnfbfrfsckhcvzis.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_cz6stQiD91vUY50hapD3Qw_Non3Y2ea';
 
@@ -425,11 +574,11 @@ document.getElementById('form-lead').addEventListener('submit', async function (
     });
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     msg.className = 'ok';
-    msg.textContent = '✅ Recebido! Em breve a equipe do CTMA te chama no WhatsApp.';
+    msg.textContent = 'Recebido! Em breve a equipe do CTMA te chama no WhatsApp.';
     this.reset();
   } catch (e) {
     msg.className = 'erro';
-    msg.textContent = 'Ops, não foi possível enviar. Fale direto com a gente no WhatsApp: (21) 99848-1797.';
+    msg.textContent = 'Não foi possível enviar. Fale direto com a gente: (21) 99848-1797.';
   } finally {
     btn.disabled = false;
   }
